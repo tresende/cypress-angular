@@ -32,7 +32,7 @@ context('Actions', () => {
         cy.get('[data-cy="button-get-data"]').click();
         // cy.wait("@getData");
         cy.get('@getData');
-        const totalTableRows = cy.get("[data-cy='table-data'] > tbody > tr").length; 
+        cy.get("[data-cy='table-data'] > tbody > tr").should('have.length', 30); 
     });
    
 })
